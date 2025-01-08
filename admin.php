@@ -8,9 +8,7 @@
     <link
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
     <!-- Bootstrap Icons CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -90,6 +88,9 @@
                             <a class="nav-link" href="admin.php?page=gallery&judul=Gallery">Gallery</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="admin.php?page=profile">Profile</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="logout.php">Logout</a>
                         </li>
                     </ul>
@@ -105,7 +106,7 @@
                 session_start();
                 if (isset($_GET['page'])) {
                 ?>
-                    <h4 class="lead display-6 pb-2 border-bottom border-danger-subtle"><?= ucfirst($_GET['judul']) ?></h4>
+                    <h4 class="lead display-6 pb-2 border-bottom border-danger-subtle"></h4>
                 <?php
                     include($_GET['page'] . ".php");
                 } else {
